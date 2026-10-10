@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganesh Charan | Vlogs</title>
+<meta name="description" content="Ganesh Charan's personal vlog website — travel, lifestyle, tech and everyday adventures.">
+<style>
+:root{--bg:#071521;--card:#102333;--text:#f4f9ff;--muted:#a8c0d2;--accent:#22c7d9;--line:#1e3a4d}
+*{box-sizing:border-box;scroll-behavior:smooth} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(245,242,236,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:1.35rem;font-weight:900}.logo span{color:var(--accent)}
+nav{display:flex;gap:24px}nav a{color:#343b4b;font-weight:600}nav a:hover{color:var(--accent)}
+.menu{display:none;background:none;border:0;color:white;font-size:28px}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:80px 0;background:radial-gradient(circle at 50% 10%,#123b58 0,#071521 52%)}
+.badge{display:inline-block;border:1px solid #3b414d;border-radius:99px;padding:7px 14px;color:#41495a;font-size:.85rem}
+h1{font-size:clamp(3rem,8vw,6.5rem);line-height:.95;margin:20px 0 18px;letter-spacing:-4px}.hero p{max-width:650px;margin:0 auto 28px;color:var(--muted);font-size:1.1rem}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:13px 20px;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:white}.secondary{background:#ffffff;color:#202638;border:1px solid #ded8cf}.btn:hover{transform:translateY(-2px)}
+section{padding:80px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.section-head h2{font-size:2.2rem;margin:0}.section-head p{color:var(--muted);margin:0}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:25px}.search{flex:1;min-width:220px;padding:13px 15px;border-radius:10px;border:1px solid var(--line);background:#ffffff;color:#202638}
+.filter{padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:#ffffff;color:#202638}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-5px)}.thumb{height:190px;background:linear-gradient(135deg,#17445b,#102333);display:grid;place-items:center;font-size:3rem}.content{padding:20px}.tag{color:var(--accent);font-size:.78rem;font-weight:800;text-transform:uppercase}.card h3{margin:7px 0}.card p{color:var(--muted);margin:0 0 14px}.watch{display:inline-block;color:white;font-weight:800}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.stat{background:#f5f2ec;padding:18px;border-radius:14px;text-align:center}.stat b{display:block;font-size:1.5rem}.muted{color:var(--muted)}
+.newsletter{background:linear-gradient(135deg,#12364b,#102333);border:1px solid var(--line);border-radius:22px;padding:40px;text-align:center}.newsletter form{display:flex;max-width:560px;margin:22px auto 0;gap:10px}.newsletter input{flex:1;padding:14px;border-radius:10px;border:1px solid var(--line);background:#ffffff;color:#202638}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:20;place-items:center;padding:20px}.modal.open{display:grid}.modal-box{width:min(600px,100%);background:#ffffff;border:1px solid var(--line);border-radius:18px;padding:28px}.close{float:right;background:none;border:0;color:white;font-size:25px;cursor:pointer}
+@media(max-width:800px){nav{display:none}.menu{display:block}.grid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}h1{letter-spacing:-2px}.newsletter form{flex-direction:column}.section-head{display:block}.section-head p{margin-top:8px}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="logo" href="#home">GANESH<span> CHARAN</span></a><nav id="nav"><a href="#home">Home</a><a href="#vlogs">Vlogs</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav><button class="menu" onclick="toggleMenu()">☰</button></div></header>
+
+<main>
+<section class="hero" id="home"><div class="container">
+<span class="badge">🎥 Welcome to my world</span>
+<h1>Life. Vlogs.<br><span style="color:var(--accent)">Memories.</span></h1>
+<p>I'm Ganesh Charan. Follow my adventures, travel stories, lifestyle moments, tech experiments and everything happening behind the camera.</p>
+<div class="buttons"><a class="btn primary" href="#vlogs">Explore Vlogs</a><button class="btn secondary" onclick="openModal()">▶ Watch Trailer</button></div>
+</div></section>
+
+<section id="vlogs"><div class="container"><div class="section-head"><div><h2>Latest Vlogs</h2><p>New stories, adventures and memories.</p></div></div>
+<div class="toolbar"><input id="search" class="search" placeholder="Search vlogs..." oninput="renderVlogs()"><select id="filter" class="filter" onchange="renderVlogs()"><option value="all">All categories</option><option>Travel</option><option>Lifestyle</option><option>Tech</option><option>Food</option></select></div>
+<div class="grid" id="vlogGrid"></div></div></section>
+
+<section id="about"><div class="container about"><div><span class="tag">About me</span><h2>Hey, I'm Ganesh Charan 👋</h2><p class="muted">This is my little corner of the internet where I share real moments, places I visit, things I learn and stories worth remembering.</p><p class="muted">The site is designed to grow with the channel — add real YouTube links, photos, social profiles and new videos anytime.</p><div class="stats"><div class="stat"><b>50+</b><span class="muted">Stories</span></div><div class="stat"><b>10K+</b><span class="muted">Views</span></div><div class="stat"><b>∞</b><span class="muted">Memories</span></div></div></div><div class="about-box"><h3>What you'll find here</h3><p>📍 Travel & adventures</p><p>🎬 Behind the scenes</p><p>💻 Tech & gadgets</p><p>🍜 Food & lifestyle</p><p>📸 Photography & memories</p><a class="btn primary" href="#contact">Let's Connect</a></div></div></section>
+
+<section id="gallery"><div class="container"><div class="section-head"><div><h2>Gallery</h2><p>Replace these placeholders with your own photos.</p></div></div><div class="grid">
+<div class="card"><div class="thumb">📸</div><div class="content"><h3>Travel Diary</h3><p>A collection of places and moments.</p></div></div>
+<div class="card"><div class="thumb">🌄</div><div class="content"><h3>Weekend Adventures</h3><p>Small trips, big memories.</p></div></div>
+<div class="card"><div class="thumb">🎥</div><div class="content"><h3>Behind the Camera</h3><p>How the vlog comes together.</p></div></div>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="newsletter"><h2>Stay connected</h2><p class="muted">Subscribe for new vlog updates and stories.</p><form onsubmit="subscribe(event)"><input id="email" type="email" required placeholder="Enter your email"><button class="btn primary">Subscribe</button></form><p id="message" class="muted"></p></div></div></section>
+</main>
+
+<footer><div class="container footer-inner"><div>© 2026 <b>Ganesh Charan</b>. All rights reserved.</div><div><a href="#home">Instagram</a> · <a href="#home">YouTube</a> · <a href="#home">X</a></div></div></footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><h2>Ganesh Charan Vlog Trailer</h2><p class="muted">Add your YouTube trailer link here. This demo modal is ready for your real video embed.</p><button class="btn primary" onclick="closeModal()">Got it</button></div></div>
+
+<script>
+const vlogs=[
+ {title:"A Day in My Life",cat:"Lifestyle",desc:"A simple day, real moments and everything in between.",icon:"☀️"},
+ {title:"My Latest Travel Adventure",cat:"Travel",desc:"Come along for a new journey and unforgettable views.",icon:"🏔️"},
+ {title:"My Creator Setup",cat:"Tech",desc:"The gadgets and tools I use to create my videos.",icon:"💻"},
+ {title:"Street Food Hunt",cat:"Food",desc:"Exploring local flavors and finding hidden gems.",icon:"🍜"},
+ {title:"Weekend Road Trip",cat:"Travel",desc:"Roads, music, friends and a camera rolling.",icon:"🚗"},
+ {title:"Behind the Scenes",cat:"Lifestyle",desc:"What really happens before a vlog goes live.",icon:"🎬"}
+];
+function renderVlogs(){
+ const q=document.getElementById('search').value.toLowerCase(), f=document.getElementById('filter').value;
+ const items=vlogs.filter(v=>(f==="all"||v.cat===f)&&(v.title+" "+v.desc).toLowerCase().includes(q));
+ document.getElementById('vlogGrid').innerHTML=items.map(v=>`<article class="card"><div class="thumb">${v.icon}</div><div class="content"><span class="tag">${v.cat}</span><h3>${v.title}</h3><p>${v.desc}</p><a class="watch" href="#" onclick="watch('${v.title}');return false">Watch vlog →</a></div></article>`).join('')||'<p class="muted">No vlogs found.</p>';
+}
+function watch(t){alert("Demo: \""+t+"\". Add your YouTube/video URL in the website code to make this button live.");}
+function openModal(){document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+function subscribe(e){e.preventDefault();document.getElementById('message').textContent="Thanks for subscribing! (Demo form — connect it to your email service for real subscriptions.)";e.target.reset()}
+function toggleMenu(){const n=document.getElementById('nav');n.style.display=n.style.display==="flex"?"none":"flex";n.style.position="absolute";n.style.top="72px";n.style.right="4%";n.style.flexDirection="column";n.style.background="#11151c";n.style.padding="18px";n.style.border="1px solid #262c38";n.style.borderRadius="12px"}
+renderVlogs();
+</script>
+</body>
+</html>
